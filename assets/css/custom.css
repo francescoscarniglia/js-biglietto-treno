@@ -22,6 +22,8 @@ body {
 .list-inline li {
   display: flex;
   flex-direction: row;
+  padding: 10px 10px;
+  border-bottom: 1px dotted gray;
 }
 
 .bold {
