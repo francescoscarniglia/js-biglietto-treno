@@ -16,6 +16,7 @@ console.log('I tuoi anni sono: ', anniUtente);
 
 document.getElementById('km').innerHTML = kmUtente;
 document.getElementById('eta').innerHTML = anniUtente;
+document.getElementById('prezzo-pieno').innerHTML = totaleCosto + '€';
 
 // 3° step che prezzo avrà il biglietto?
 // il prezzo del biglietto è definito in base ai km (0.21 al km), ma
@@ -44,5 +45,3 @@ if(anniUtente < maggiorenne) {
   document.getElementById('sconto').innerHTML = 'prezzo pieno';
  console.log('Prezzo pieno: ', parseInt(totaleCosto * 10 , '€'));
 }
-
-document.getElementById('prezzo-pieno').innerHTML = totaleCosto + '€';
