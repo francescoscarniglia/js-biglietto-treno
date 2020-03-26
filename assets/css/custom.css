@@ -4,5 +4,30 @@
 }
 
 body {
-  background: red;
+  background: #299;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 10px;
+  background: #fff;
+}
+
+.list-inline {
+  list-style: none;
+}
+
+.list-inline li {
+  display: flex;
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.left-10 {
+  margin-left:  10px;
 }
