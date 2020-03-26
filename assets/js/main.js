@@ -16,7 +16,7 @@ console.log('I tuoi anni sono: ', anniUtente);
 
 document.getElementById('km').innerHTML = kmUtente;
 document.getElementById('eta').innerHTML = anniUtente;
-document.getElementById('prezzo-pieno').innerHTML = totaleCosto + '€';
+document.getElementById('prezzo-pieno').innerHTML = parseInt(totaleCosto * 10 ) + '€';
 
 // 3° step che prezzo avrà il biglietto?
 // il prezzo del biglietto è definito in base ai km (0.21 al km), ma
@@ -27,21 +27,21 @@ document.getElementById('prezzo-pieno').innerHTML = totaleCosto + '€';
 if(anniUtente < maggiorenne) {
   console.log('Prezzo Pieno:', totaleCosto + "€");
   var costoMinorenne = totaleCosto * 20 / 100;
-  console.log('Riduzione del 20%: ', costoMinorenne + '€');
-  document.getElementById('sconto').innerHTML = costoMinorenne + '€ ' + '(20%)';
+  console.log('Riduzione del 20%: ', parseInt(costoMinorenne * 10) + "€");
+  document.getElementById('sconto').innerHTML = parseInt(costoMinorenne * 10)  + "€ " + '(20%)';
   var totaleMinorenne = totaleCosto - costoMinorenne;
-  document.getElementById('name').innerHTML = totaleMinorenne + '€';
-  console.log('Prezzo scontato: ', totaleCosto - costoMinorenne + '€');
+  document.getElementById('name').innerHTML = parseInt(totaleMinorenne * 10) + "€ ";
+  console.log('Prezzo scontato: ', totaleCosto - costoMinorenne + "€ ");
 } else if(anniUtente > overSixteen) {
-  console.log('Prezzo Pieno:', totaleCosto + '€');
+  console.log('Prezzo Pieno:', totaleCosto + "€ ");
   var costoOver65 = totaleCosto * 40 / 100;
-  console.log('Riduzione del 40%: ', costoOver65 + '€');
-  document.getElementById('sconto').innerHTML = costoOver65 + '€ ' + '(40%)';
+  console.log('Riduzione del 40%: ', costoOver65 + '€ ');
+  document.getElementById('sconto').innerHTML = parseInt(costoOver65 * 10) + "€ " + '(40%)';
   var totaleOver65 = totaleCosto - costoOver65;
-  console.log('Prezzo scontato: ', totaleCosto - costoOver65 + '€');
-  document.getElementById('name').innerHTML = totaleOver65  + '€';
+  console.log('Prezzo scontato: ', totaleCosto - costoOver65 + "€");
+  document.getElementById('name').innerHTML = parseInt(totaleOver65 * 10) + "€ ";
 } else {
-  document.getElementById('name').innerHTML = totaleCosto + '€';
+  document.getElementById('name').innerHTML = parseInt(totaleCosto * 10) + "€ ";
   document.getElementById('sconto').innerHTML = 'prezzo pieno';
- console.log('Prezzo pieno: ', parseInt(totaleCosto * 10 , '€'));
+ console.log(parseInt(totaleCosto * 10 ), "€ ");
 }
